@@ -1,21 +1,16 @@
-import React, {useEffect, useState } from 'react'
-import axios from 'axios';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Explore from './explore';
+import Register from './register';
 
 function App() {
-
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    axios.get('http://localhost:5000/')
-    .then((response) => setMessage(response.data))
-    .catch((error) => console.error(error));
-  }, []);
-
   return (
-    <div>
-      <h1>Letterboxd Clone</h1>
-      <p>{message}</p>
-    </div>
+    <Router>
+      <Routes>
+      <Route path="/" element={<Explore />} />
+      <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
   );
 }
 
