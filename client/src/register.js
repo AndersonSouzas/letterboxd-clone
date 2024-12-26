@@ -7,6 +7,16 @@ function Register() {
     const [password, setPassword] = useState('');
 
     const handleRegister = async () => {
+        if (!email.includes('@')) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
+
+        if (password.length < 6) {
+            alert('A senha deve ter pelo menos 6 caracteres.');
+            return;
+        }
+
         try {
             await axios.post('http://localhost:5000/auth/register', { email, password });
             alert('Usuário registado com sucesso!');
