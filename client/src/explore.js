@@ -6,7 +6,7 @@ function Explore() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        api.get('/movies/popular')
+        api.get('/movie/popular')
             .then((response) => setMovies(response.data.results))
             .catch((error) => console.error(error))
     }, []);
