@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import api from './api';
+import axios from 'axios';
+import './App.css';
 
 function Explore() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        api.get('/movie/popular')
+        axios.get('api/movie/popular')
             .then((response) => setMovies(response.data.results))
             .catch((error) => console.error(error))
     }, []);
 
     return (
-        <div>
-            <h1>Explorar Filmes</h1>
+        <div style={{ padding: '20px' }}>
+            <h1>Letterboxd</h1>
             <Link to="/register">Ir para Registro</Link>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {movies.map((movie) => (
@@ -23,7 +24,6 @@ function Explore() {
                             alt={movie.title}
                             style={{ width: '150px', height: '225px' }}
                         />
-                        <h3>{movie.title}</h3>
                     </div>
                 ))}
             </div>
