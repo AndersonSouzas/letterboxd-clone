@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './App.css';
+import '../styles/App.css';
 
 function Explore() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        axios.get('api/movie/popular')
+        axios.get('/api/movie/popular')
             .then((response) => setMovies(response.data.results))
             .catch((error) => console.error(error))
     }, []);
@@ -15,7 +15,7 @@ function Explore() {
     return (
         <div style={{ padding: '20px' }}>
             <h1>Letterboxd</h1>
-            <Link to="/register">Ir para Registro</Link>
+            <Link to="pages/register">Ir para Registro</Link>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {movies.map((movie) => (
                     <div key={movie.id} style={{ margin: '10px' }}>

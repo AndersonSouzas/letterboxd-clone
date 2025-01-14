@@ -38,3 +38,15 @@ app.listen(PORT, () => {
 
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
+
+const mongoose = requise('mongoose');
+
+mongoose.connect('mongodb://127.0.0.1:letterboxd-clone', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => console.log('Conectado ao MongoDB'))
+    .catch((error) => console.error('Erro ao conectar ao MongoDB:', error));
+
+const profileRoutes = require('./routes/profile');
+app.use('/profile', profileRoutes);
