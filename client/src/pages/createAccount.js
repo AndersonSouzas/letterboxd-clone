@@ -1,0 +1,48 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import axios from 'axios';
+
+function CreateAccount() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleRegister = async () => {
+        if (!email.includes('@')) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
+
+        if (password.length < 6) {
+            alert('A senha deve ter pelo menos 6 caracteres.');
+            return;
+        }
+
+        try {
+            await axios.post('http://localhost:5000/auth/register', { email, password });
+            alert('Usuário registado com sucesso!');
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    return (
+        <div>
+            <h1>Create Account</h1>
+            <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+                type="password"
+                placeholder='Password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleRegister}>Registrar</button>
+        </div>
+    )
+}
+
+export default CreateAccount;
