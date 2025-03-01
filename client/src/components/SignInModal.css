@@ -1,0 +1,60 @@
+/* Fundo escurecido quando o modal estiver aberto */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* O próprio modal */
+.sign-in-modal {
+    background: #222; /* Fundo escuro para o modal */
+    color: #99aabb; /* Cor do texto */
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos inputs */
+.sign-in-modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #99aabb;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
+
+/* Botão de Sign In */
+.sign-in-modal button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-in-modal button:hover {
+    background-color: #0056b3;
+}
+
+/* Botão de fechar */
+.close-btn {
+    background: none;
+    color: #99aabb;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
