@@ -1,28 +1,18 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/home'
-import Explore from './pages/explore';
-import Register from './pages/register';
-import Login from './pages/login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Films from './pages/films';
 import Profile from './pages/profile';
+import Navbar from './components/Navbar';
+import './styles/App.css';
 
 function App() {
   return (
     <Router>
       <div>
-        <nav style={{ marginBottom: '20px', textAlign: 'center' }}>
-          <Link to="/" style={{ margin: '0 10px' }}>Home</Link>
-          <Link to="/login" style={{ margin: '0 10px' }}>Login</Link>
-          <Link to="/profile" style={{ margin: '0 10px' }}>Perfil</Link>
-          <Link to="/Register" style={{ margin: '0 10px' }}>Registro</Link>
-          <Link to="/Explore" style={{ margin: '0 10px' }}>Explorar</Link>
-        </nav>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/explore" element={<Explore />} />
+          <Route path="/Films" element={<Films />} />
         </Routes>
       </div>
     </Router>

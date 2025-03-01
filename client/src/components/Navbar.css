@@ -1,7 +1,7 @@
 /* Estilos gerais da barra de navegação */
 
 body {
-    padding-top: 45px;
+    padding-top: 60px;
 }
 .navbar {
     display: flex;
@@ -33,9 +33,10 @@ body {
 }
 
 .logo-img {
-    height: 25px;
+    height: 20px;
     width: auto;
     margin-right: 20px;
+    display: grid;
 }
 
 /* Container dos itens de navegação */
@@ -52,7 +53,7 @@ body {
 .navbar-link {
     color: rgb(153, 170, 187);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
     transition: color 0.3s ease;
 }
 
