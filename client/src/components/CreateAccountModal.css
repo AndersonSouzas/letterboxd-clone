@@ -1,0 +1,75 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
+    visibility: visible;
+    font-family: 'Graphik-Regular-Web', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.125px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: rgb(153, 170, 187);
+    border-bottom-color: rgb(153, 170, 187);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-left-color: rgb(153, 170, 187);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(153, 170, 187);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(153, 170, 187);
+    border-top-style: none;
+    border-top-width: 0px;
+    outline-color: rgb(153, 170, 187);
+    outline-style: none;
+    outline-width: 0px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin-block-end: 20px;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    unicode-bidi: isolate;
+}
+
+.modal-content {
+    background: #14181c;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-btn {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}

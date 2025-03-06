@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/App.css';
 
-function Explore() {
+function Films() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -14,8 +14,6 @@ function Explore() {
 
     return (
         <div style={{ padding: '20px' }}>
-            <h1>Letterboxd</h1>
-            <Link to="pages/register">Ir para Registro</Link>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {movies.map((movie) => (
                     <div key={movie.id} style={{ margin: '10px' }}>
@@ -31,4 +29,4 @@ function Explore() {
     );
 }
 
-export default Explore;
+export default Films;
